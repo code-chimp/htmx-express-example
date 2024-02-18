@@ -1,0 +1,64 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+  <h3>New Contact</h3>
+  <div class="row justify-content-center">
+    <div class="col-sm-12 col-md-6">
+      <form action="/contacts/new" method="post">
+        <div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input id="email" name="email"
+                   type="email"
+                   value="{{ contact.email ?? '' }}"
+                   class="form-control{{ contact.errors['email'] ? ' is-invalid' : '' }}"
+                   aria-describedby="emailStatus"
+                   placeholder="Email"/>
+            <span id="emailStatus" class="invalid-feedback">{{ contact.errors['email'] }}</span>
+          </div>
+          <div class="mb-3">
+            <label for="first_name" class="form-label">First Name</label>
+            <input id="first_name" name="first_name"
+                   type="text"
+                   value="{{ contact.first ?? '' }}"
+                   class="form-control{{ contact.errors['first'] ? ' is-invalid' : '' }}"
+                   aria-describedby="firstStatus"
+                   placeholder="First Name"/>
+            <span id="firstStatus" class="invalid-feedback">{{ contact.errors['first'] }}</span>
+          </div>
+          <div class="mb-3">
+            <label for="last_name" class="form-label">Last Name</label>
+            <input id="last_name" name="last_name"
+                   type="text"
+                   value="{{ contact.last ?? '' }}"
+                   class="form-control{{ contact.errors['last'] ? ' is-invalid' : '' }}"
+                   aria-describedby="lastStatus"
+                   placeholder="Last Name"/>
+            <span id="lastStatus" class="invalid-feedback">{{ contact.errors['last'] }}</span>
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">Phone</label>
+            <input id="phone" name="phone"
+                   type="tel"
+                   value="{{ contact.phone ?? '' }}"
+                   class="form-control{{ contact.errors['phone'] ? ' is-invalid' : '' }}"
+                   aria-describedby="phoneStatus"
+                   placeholder="Phone"/>
+            <span id="phoneStatus" class="invalid-feedback">{{ contact.errors['phone'] }}</span>
+          </div>
+        </div>
+        <button class="btn btn-success">
+          <i class="fa fa-floppy-disk"></i>
+          Save
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <p>
+    <a href="/contacts" class="btn btn-primary" role="button">
+      <i class="fa fa-home"></i>
+      Home
+    </a>
+  </p>
+{% endblock %}
