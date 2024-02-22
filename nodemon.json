@@ -1,4 +1,8 @@
 {
-  "ignore": ["node_modules", "*.test.js"],
+  "ext": "js,twig",
+  "ignore": [
+    "node_modules",
+    "*.test.js"
+  ],
   "verbose": true
 }
