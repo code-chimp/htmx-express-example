@@ -3,21 +3,21 @@ let router = express.Router();
 let Contact = require('../models/Contact');
 
 /* GET contacts listing. */
-router.get('/', function (req, res, next) {
+router.get('/', function (req, res) {
   let contacts = req.contactsService.getAll(req.query.q);
 
   res.render('contacts/show-all', { title: 'Contacts', contacts, query: req.query.q });
 });
 
 /* GET new contact form. */
-router.get('/new', function (req, res, next) {
+router.get('/new', function (req, res) {
   let contact = new Contact();
 
   res.render('contacts/new', { title: 'New Contact', contact });
 });
 
 /* POST new contact. */
-router.post('/new', function (req, res, next) {
+router.post('/new', async function (req, res) {
   let contact = new Contact(
     null,
     req.body.first_name,
@@ -35,7 +35,7 @@ router.post('/new', function (req, res, next) {
       return;
     }
 
-    req.contactsService.add(contact);
+    await req.contactsService.add(contact);
 
     res.redirect('/contacts');
     return;
@@ -45,21 +45,21 @@ router.post('/new', function (req, res, next) {
 });
 
 /* GET contact by id. */
-router.get('/:id', function (req, res, next) {
+router.get('/:id', function (req, res) {
   let contact = req.contactsService.getById(req.params.id);
 
   res.render('contacts/show', { title: 'View Contact', contact });
 });
 
 /* GET edit contact form. */
-router.get('/:id/edit', function (req, res, next) {
+router.get('/:id/edit', function (req, res) {
   let contact = req.contactsService.getById(req.params.id);
 
   res.render('contacts/edit', { title: 'Edit Contact', contact });
 });
 
 /* POST edit contact. */
-router.post('/:id/edit', function (req, res, next) {
+router.post('/:id/edit', async function (req, res) {
   let contact = new Contact(
     +req.params.id,
     req.body.first_name,
@@ -79,7 +79,7 @@ router.post('/:id/edit', function (req, res, next) {
       return;
     }
 
-    req.contactsService.update(+req.params.id, contact);
+    await req.contactsService.update(+req.params.id, contact);
 
     res.redirect('/contacts');
     return;
@@ -89,8 +89,8 @@ router.post('/:id/edit', function (req, res, next) {
 });
 
 /* DELETE contact. */
-router.post('/:id/delete', function (req, res, next) {
-  req.contactsService.delete(req.params.id);
+router.post('/:id/delete', async function (req, res) {
+  await req.contactsService.delete(req.params.id);
 
   res.redirect('/contacts');
 });

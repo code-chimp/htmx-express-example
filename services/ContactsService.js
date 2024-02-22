@@ -1,16 +1,20 @@
-const fs = require('fs');
+const fs = require('node:fs/promises');
 const path = require('path');
 
 class ContactsService {
   #contacts = [];
 
   constructor() {
-    let data = fs.readFileSync(path.join(__dirname, '..', 'data', 'contacts.json'));
+    this.init();
+  }
+
+  async init() {
+    let data = await fs.readFile(path.join(__dirname, '..', 'data', 'contacts.json'));
     this.#contacts = JSON.parse(data);
   }
 
-  #persist() {
-    fs.writeFileSync(
+  async #persist() {
+    await fs.writeFile(
       path.join(__dirname, '..', 'data', 'contacts.json'),
       JSON.stringify(this.#contacts, null, 2),
     );
@@ -35,27 +39,27 @@ class ContactsService {
     return this.#contacts.find(contact => contact.id === +id);
   }
 
-  add(contact) {
+  async add(contact) {
     contact.id = Math.max(...this.#contacts.map(contact => contact.id)) + 1;
 
     this.#contacts.push(contact);
 
-    this.#persist();
+    await this.#persist();
   }
 
-  update(id, newContactData) {
+  async update(id, newContactData) {
     let contactIndex = this.#contacts.findIndex(contact => contact.id === id);
     if (contactIndex !== -1) {
       this.#contacts[contactIndex] = { ...this.#contacts[contactIndex], ...newContactData };
-    }
 
-    this.#persist();
+      await this.#persist();
+    }
   }
 
-  delete(id) {
+  async delete(id) {
     this.#contacts = this.#contacts.filter(contact => contact.id !== +id);
 
-    this.#persist();
+    await this.#persist();
   }
 }
 
