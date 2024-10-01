@@ -5,7 +5,7 @@ charset = utf-8
 indent_style = space
 trim_trailing_whitespace = true
 
-[*.{css,html,js,json,md,ps1,scss,sh,ts,tsx}]
+[*.{css,html,js,json,jsx,md,ps1,scss,sh,ts,tsx}]
 indent_size = 2
 
 [*.md]

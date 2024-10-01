@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "first": "Carson",
+    "last": "Gross",
+    "phone": "123-456-7890",
+    "email": "carson@example.com"
+  },
+  {
+    "id": 2,
+    "first": "Pat",
+    "last": "Example",
+    "phone": "555-555-9876",
+    "email": "pat@example.com"
+  },
+  {
+    "id": 3,
+    "first": "Walder",
+    "last": "Frey",
+    "phone": "555-555-1111",
+    "email": "hodor@holdthedoor.com"
+  },
+  {
+    "id": 4,
+    "first": "JR Bob",
+    "last": "Dobbs",
+    "phone": "111-111-1111",
+    "email": "bob@slack.com"
+  },
+  {
+    "id": 5,
+    "first": "Jayne",
+    "last": "Cobb",
+    "phone": "111-111-2222",
+    "email": "brutal@shiney.com"
+  },
+  {
+    "id": 6,
+    "first": "Wilma",
+    "last": "Deering",
+    "phone": "111-111-3333",
+    "email": "wdeering@edd.gov"
+  },
+  {
+    "id": 7,
+    "first": "Sir",
+    "last": "Lancelot",
+    "phone": "111-111-4444",
+    "email": "me@myidiom.net"
+  },
+  {
+    "id": 8,
+    "first": "Neil",
+    "last": "Hippie",
+    "phone": "111-111-5555",
+    "email": "boomshanka@scumbag.edu"
+  },
+  {
+    "id": 9,
+    "first": "Maurice",
+    "last": "Moss",
+    "phone": "111-111-6666",
+    "email": "moss@reynholmind.com"
+  },
+  {
+    "id": 10,
+    "first": "Sam",
+    "last": "Tyler",
+    "phone": "111-111-7777",
+    "email": "sammyt@mars.com"
+  },
+  {
+    "id": 11,
+    "first": "Kip",
+    "last": "Dynamite",
+    "phone": "111-111-8888",
+    "email": "aaron.ruell@example.com"
+  },
+  {
+    "id": 12,
+    "first": "Bobbie",
+    "last": "Draper",
+    "phone": "111-111-9999",
+    "email": "gunny@mmc.gov"
+  }
+]

@@ -1,8 +1,7 @@
 {
-  "ext": "js,twig",
-  "ignore": [
-    "node_modules",
-    "*.test.js"
-  ],
-  "verbose": true
+  "watch": ["src", "public"],
+  "ext": ".js,.ts,.twig,.css",
+  "ignore": ["node_modules", "*.test.ts"],
+  "verbose": true,
+  "exec": "ts-node --files ./src/index.ts"
 }
