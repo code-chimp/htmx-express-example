@@ -6,9 +6,9 @@ import { join } from 'node:path';
 
 import * as middlewares from './middlewares';
 
-import { default as contactsService } from './services/ContactsService';
-import { default as indexRouter } from './routes/index-router';
-import { default as contactsRouter } from './routes/contacts-router';
+import contactsService from './services/ContactsService';
+import indexRouter from './routes/index-router';
+import contactsRouter from './routes/contacts-router';
 
 const app = express();
 
