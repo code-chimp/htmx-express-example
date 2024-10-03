@@ -4,4 +4,5 @@ export default interface IContact {
   last: string;
   phone: string;
   email: string;
+  errors?: Record<string, string[]>;
 }

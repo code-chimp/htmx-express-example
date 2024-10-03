@@ -12,6 +12,7 @@ export default tseslint.config(
     rules: {
       '@typescript-eslint/array-type': ['warn', { default: 'array' }],
       '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/no-non-null-assertion': 'off',
       '@typescript-eslint/no-unused-vars': [
         2,
         { vars: 'local', args: 'after-used', argsIgnorePattern: '_' },
