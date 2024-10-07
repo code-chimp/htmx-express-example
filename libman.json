@@ -23,7 +23,7 @@
       "files": ["css/all.min.css", "js/all.min.js", "sprites/*", "webfonts/*"]
     },
     {
-      "library": "htmx@2.0.0",
+      "library": "htmx@2.0.2",
       "destination": "public/lib/htmx",
       "files": ["htmx.min.js"]
     },
