@@ -1,4 +1,4 @@
-<div class="mb-3">
+<div class="mb-4">
   <label for="email" class="form-label">Email</label>
   <input id="email" name="email"
          {% if (contact.id) %}form="edit-form"{%  endif %}
@@ -11,7 +11,7 @@
   <span id="emailStatus" class="invalid-feedback">{{ contact.errors.email }}</span>
   {% endif %}
 </div>
-<div class="mb-3">
+<div class="mb-4">
   <label for="first_name" class="form-label">First Name</label>
   <input id="first_name" name="first_name"
          {% if (contact.id) %}form="edit-form"{%  endif %}
@@ -24,7 +24,7 @@
   <span id="firstStatus" class="invalid-feedback">{{ contact.errors.first_name }}</span>
   {% endif %}
 </div>
-<div class="mb-3">
+<div class="mb-4">
   <label for="last_name" class="form-label">Last Name</label>
   <input id="last_name" name="last_name"
          {% if (contact.id) %}form="edit-form"{%  endif %}
@@ -37,7 +37,7 @@
   <span id="lastStatus" class="invalid-feedback">{{ contact.errors.last_name }}</span>
   {% endif %}
 </div>
-<div class="mb-3">
+<div class="mb-4">
   <label for="phone" class="form-label">Phone</label>
   <input id="phone" name="phone"
          {% if (contact.id) %}form="edit-form"{%  endif %}
@@ -45,7 +45,7 @@
          value="{{ contact.phone ?? '' }}"
          class="form-control{{ contact.errors.phone ? ' is-invalid' : '' }}"
          {% if (contact.errors.phone ) %}aria-describedby="phoneStatus"{% endif %}
-         placeholder="Phone" />
+         placeholder="###-###-####" />
   {% if (contact.errors.phone ) %}
   <span id="phoneStatus" class="invalid-feedback">{{ contact.errors.phone }}</span>
   {% endif %}

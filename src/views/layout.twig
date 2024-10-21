@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>{{ title }} - Contacts App</title>
-  <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"/>
-  <link rel='stylesheet' href='/css/style.css'/>
-  <link rel="icon" href="/favicon.ico" sizes="32x32"/>
-  <link rel="icon" href="/icon.svg" type="image/svg+xml"/>
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180"/>
-  <link rel="manifest" href="/site.webmanifest"/>
+  <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css" />
+  <link rel='stylesheet' href='/css/style.css' />
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+  <link rel="manifest" href="/site.webmanifest" />
   {% block head %}{% endblock %}
 </head>
-<body class="col-lg-8 mx-auto p-4 py-md-5">
-<header class="d-flex align-items-center pb-3 mb-1 border-bottom">
-  <a href="/" class="d-flex align-items-center text-body-emphasis text-decoration-none">
-    <span class="fs-3">Contacts App</span>
-  </a>
-</header>
+<body>
+<div class="flex h-screen flex-col overflow-hidden">
+  <header class="flex w-full border-b pb-2 ps-3 mb-1">
+    <h1>
+      <a href="/">Contacts App</a>
+    </h1>
+  </header>
 
-<main role="main" class="container">
-  {% block body %}{% endblock %}
-</main>
+  <main role="main" class="w-full px-1 sm:w-2/3 sm:px-0 sm:mx-auto">
+    {% block body %}{% endblock %}
+  </main>
+</div>
 
-<script src="/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
 {% block scripts %}{% endblock %}
 </body>
 </html>

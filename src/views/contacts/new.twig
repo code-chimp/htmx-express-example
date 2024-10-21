@@ -2,11 +2,11 @@
 
 {% block body %}
   <h3>New Contact</h3>
-  <div class="row justify-content-center">
-    <div class="col-sm-12 col-md-6">
+  <div class="row justify-center">
+    <div class="w-full md:w-1/2">
       <form action="/contacts/new" method="post">
         {% include 'contacts/contact-form.twig' %}
-        <button class="btn btn-success">
+        <button class="btn btn-success float-right lg:float-none">
           <i class="fa fa-floppy-disk"></i>
           Save
         </button>

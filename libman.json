@@ -8,16 +8,6 @@
       "files": ["cdn.min.js"]
     },
     {
-      "library": "bootstrap@5.3.3",
-      "destination": "src/public/lib/bootstrap",
-      "files": [
-        "css/bootstrap.min.css",
-        "css/bootstrap.min.css.map",
-        "js/bootstrap.bundle.min.js",
-        "js/bootstrap.bundle.min.js.map"
-      ]
-    },
-    {
       "library": "font-awesome@6.6.0",
       "destination": "src/public/lib/font-awesome",
       "files": ["css/all.min.css", "js/all.min.js", "sprites/*", "webfonts/*"]

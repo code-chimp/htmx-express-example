@@ -1,7 +1,7 @@
 {
   "watch": ["src", "public"],
   "ext": ".js,.ts,.twig,.css",
-  "ignore": ["node_modules", "*.test.ts"],
+  "ignore": ["node_modules", "*.test.ts", "src/styles/tailwind.css"],
   "verbose": true,
   "exec": "ts-node --files ./src/index.ts"
 }

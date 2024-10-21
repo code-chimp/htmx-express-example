@@ -4,17 +4,19 @@
   <form id="edit-form" action="/contacts/{{ contact.id }}/edit" method="post"></form>
   <form id="delete-form" action="/contacts/{{ contact.id }}/delete" method="post"></form>
   <h3>Update Contact</h3>
-  <div class="row justify-content-center">
-    <div class="col-sm-12 col-md-6">
+  <div class="row justify-center">
+    <div class="w-full md:w-1/2">
       {% include 'contacts/contact-form.twig' %}
-      <button type="submit" form="edit-form" class="btn btn-success">
-        <i class="fa fa-floppy-disk"></i>
-        Save
-      </button>
-      <button type="submit" form="delete-form" class="btn btn-danger float-end">
-        <i class="fa fa-trash"></i>
-        Delete
-      </button>
+      <div class="row md:justify-between">
+        <button type="submit" form="edit-form" class="btn btn-success">
+          <i class="fa fa-floppy-disk"></i>
+          Save
+        </button>
+        <button type="submit" form="delete-form" class="btn btn-danger">
+          <i class="fa fa-trash"></i>
+          Delete
+        </button>
+      </div>
     </div>
   </div>
 
